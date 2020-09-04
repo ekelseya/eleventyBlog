@@ -1,0 +1,33 @@
+---
+layout: base-layout.njk
+pagination: 
+    data: collections.post
+    size: 10
+    reverse: true
+    alias: posts
+---
+<h1>
+    Eryn's Blog
+</h2>
+
+{% for post in posts %}
+<article class="card">
+    <header>
+        <h2>
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        </h2>
+    </header>
+    <p>
+        <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
+    </p>
+
+    {%- if post.data.page.excerpt -%}
+    <p>{{ post.data.page.excerpt }}</p>
+    {%- endif -%}
+
+    <footer>
+        <a href="{{ post.url | url }}"Read more</a>
+    </footer>
+</article>
+
+{% endfor %}
