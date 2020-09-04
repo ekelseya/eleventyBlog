@@ -4,11 +4,6 @@ moment.locale('en');
 
 module.exports = function (eleventyConfig) {
 
-    eleventyConfig.setTemplateFormats([
-        "md",
-        "css"
-    ]);
-
     eleventyConfig.addFilter('dateIso', date => {
         return moment(date).toISOString();
     });
@@ -19,7 +14,9 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
-    });
+        // Optional, default is "---"
+        excerpt_separator: "<!-- excerpt -->"
+      });
 
     // Folders to copy to output folder
     eleventyConfig.addPassthroughCopy('css')
