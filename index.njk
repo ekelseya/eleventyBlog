@@ -6,17 +6,21 @@ pagination:
     reverse: true
     alias: posts
 ---
-<h1>
-    Eryn's Blog
-</h2>
+<header>
+    <h1>
+        Eryn's Blog
+    </h1>
+    <p>
+        Welcome to my blog! Here you will find musings on code, design, 
+        accessibility, and all the other odds and ends I'm inspired to write
+        about.
+</header>
 
 {% for post in posts %}
-<article class="card">
-    <header>
-        <h2>
-            <a href="{{ post.url | url }}" class="pseudo button">{{ post.data.title }}</a>
-        </h2>
-    </header>
+<article class="excerpt">
+    <h2>
+        <a href="/blog{{ post.url | url }}">{{ post.data.title }}</a>
+    </h2>
     <p>
         <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
     </p>
@@ -25,9 +29,8 @@ pagination:
     <p>{{ post.data.page.excerpt }}</p>
     {%- endif -%}
 
-    <footer>
-        <a href="{{ post.url | url }}"Read more</a>
-    </footer>
+    <a href="/blog{{ post.url | url }}">Read more</a>
 </article>
+<hr>
 
 {% endfor %}
