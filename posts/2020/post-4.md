@@ -10,17 +10,20 @@ Today I'm going to work through the Reverse String problem: Write a function tha
 
 The [Reverse String](https://leetcode.com/problems/reverse-string/) problem on [LeetCode](https://leetcode.com/) states: 
 
-<blockquote cite="https://leetcode.com/problems/reverse-string/">
-    <p>Write a function that reverses a string. The input string is given as an array of characters char[].</p>
-    <p>Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.</p>
-    <p>You may assume all the characters consist of printable ascii characters.</p>
-    <p>Example 1:</p>
-    <p>Input: ["h","e","l","l","o"]</p>
-    <p>Output: ["o","l","l","e","h"]</p>
-    <p>Example 2:</p>
-    <p>Input: ["H","a","n","n","a","h"]</p>
-    <p>Output: ["h","a","n","n","a","H"]</p>
-</blockquote>
+--- 
+
+Write a function that reverses a string. The input string is given as an array of characters char[].  
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.  
+You may assume all the characters consist of printable ascii characters.  
+
+Example 1:  
+Input: ["h","e","l","l","o"]  
+Output: ["o","l","l","e","h"]  
+Example 2:  
+Input: ["H","a","n","n","a","h"]  
+Output: ["h","a","n","n","a","H"]  
+
+---
 
 ## Built In Methods
 
